@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  position: absolute;
+  width: 390px;
+  height: 280px;
+  left: 0px;
+  top: 0px;
+
+  background: #4361EE;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 15px 15px;
+
+}
+
+.imgLogo {
+  margin-left: 62px;
+  margin-top: 10px;
+}
+
+.titleBalance {
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+.balance {
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+  margin-left: 15px;
+  font-size: 35px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  font-size: 25px;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 12px 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #0B132B;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.inc-exp-container {
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  color: black;
+
+}
+
+.titleMoney {
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.inc-exp-container > div {
+  box-sizing: border-box;
+  width: 172px;
+  height: 68px;
+  left: 13px;
+  top: 220px;
+  text-align: center;
+
+  background: #E2EAFC;
+  border: 1px solid #EDE8E8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+  margin-bottom: 5px;
+}
+
+.money.plus {
+  color: #2FBF71;
+}
+
+.money.minus {
+  color: #D62839;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px ;
+  margin-left: 22px;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+  color: #0B132B;
+}
+
+input[type="text"],
+input[type="number"] {
+  background-color: #ECF8F8;
+  border: 1px solid #CACACA;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+  display: block;
+  font-size: 15px;
+  padding: 10px;
+  width: 360px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.btn {
+  position: absolute;
+
+  width: 390px;
+  height: 69px;
+  left: 0px;
+  top: 775px;
+
+  margin-top: 50px;
+
+  background: #4361EE;
+  border-radius: 10px 10px 0px 0px;
+  border: none;
+
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.transactions {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.transactions li {
+  background-color: #E2EAFC;
+  box-shadow: var(--box-shadow);
+  color: #0B132B;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 25px 25px;
+}
+
+.transactions li.plus {
+  border-right: 20px solid #2FBF71;
+  border-radius: 5px;
+}
+
+.transactions li.minus {
+  border-right: 20px solid #D62839;
+  border-radius: 5px;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #df2b3db4;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.iconTrash {
+  width: 15px;
+}
+
+.transactions li:hover .delete-btn {
+  opacity: 1;
+}
